@@ -2,17 +2,17 @@
 #include <vector>
 
 int main3() {
-    // Доступные номиналы монет
+    // Р”РѕСЃС‚СѓРїРЅС‹Рµ РЅРѕРјРёРЅР°Р»С‹ РјРѕРЅРµС‚
     std::vector<int> coins = { 10, 5, 2, 1 };
 
-    // Вводимая сумма 
+    // Р’РІРѕРґРёРјР°СЏ СЃСѓРјРјР° 
     int totalAmount;
     std::cout << "Enter number: ";
     std::cin >> totalAmount;
 
     std::cout << "Coins: ";
 
-    // Используем жадный алгоритм для выдачи суммы
+    // РСЃРїРѕР»СЊР·СѓРµРј Р¶Р°РґРЅС‹Р№ Р°Р»РіРѕСЂРёС‚Рј РґР»СЏ РІС‹РґР°С‡Рё СЃСѓРјРјС‹
     for (int coin : coins) {
         int count = totalAmount / coin;
         totalAmount %= coin;
