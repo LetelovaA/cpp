@@ -1,16 +1,16 @@
 #include <iostream>
 #include <cmath>
 
-// Вариант 1: Используя стандартную функцию pow
+// Р’Р°СЂРёР°РЅС‚ 1: РСЃРїРѕР»СЊР·СѓСЏ СЃС‚Р°РЅРґР°СЂС‚РЅСѓСЋ С„СѓРЅРєС†РёСЋ pow
 double cubicRootVariant1(double a) {
     return std::pow(a, 1.0 / 3);
 }
 
-// Вариант 2: Итерационная формула
+// Р’Р°СЂРёР°РЅС‚ 2: РС‚РµСЂР°С†РёРѕРЅРЅР°СЏ С„РѕСЂРјСѓР»Р°
 double cubicRootVariant2(double a) {
-    double x = a;  // Начальное приближение
+    double x = a;  // РќР°С‡Р°Р»СЊРЅРѕРµ РїСЂРёР±Р»РёР¶РµРЅРёРµ
 
-    // Итерационная формула (повторяем до сходимости)
+    // РС‚РµСЂР°С†РёРѕРЅРЅР°СЏ С„РѕСЂРјСѓР»Р° (РїРѕРІС‚РѕСЂСЏРµРј РґРѕ СЃС…РѕРґРёРјРѕСЃС‚Рё)
     for (int i = 0; i < 100; ++i) {
         x = (2 * x + a / (x * x)) / 3;
     }
@@ -21,15 +21,15 @@ double cubicRootVariant2(double a) {
 int main() {
     double number;
 
-    // Ввод числа
+    // Р’РІРѕРґ С‡РёСЃР»Р°
     std::cout << "Enter a number to calculate the cube root: ";
     std::cin >> number;
 
-    // Вариант 1: Используя стандартную функцию pow
+    // Р’Р°СЂРёР°РЅС‚ 1: РСЃРїРѕР»СЊР·СѓСЏ СЃС‚Р°РЅРґР°СЂС‚РЅСѓСЋ С„СѓРЅРєС†РёСЋ pow
     double result1 = cubicRootVariant1(number);
     std::cout << "Cube root (option 1): " << result1 << std::endl;
 
-    // Вариант 2: Итерационная формула
+    // Р’Р°СЂРёР°РЅС‚ 2: РС‚РµСЂР°С†РёРѕРЅРЅР°СЏ С„РѕСЂРјСѓР»Р°
     double result2 = cubicRootVariant2(number);
     std::cout << "Cube root (option 2): " << result2 << std::endl;
 
