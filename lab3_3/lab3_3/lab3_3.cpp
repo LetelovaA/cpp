@@ -1,14 +1,14 @@
 #include <iostream>
 #include <cmath>
 
-// Функция для вычисления площади равностороннего треугольника
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ РІС‹С‡РёСЃР»РµРЅРёСЏ РїР»РѕС‰Р°РґРё СЂР°РІРЅРѕСЃС‚РѕСЂРѕРЅРЅРµРіРѕ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°
 double calculateArea(double side) {
     return (sqrt(3) / 4) * pow(side, 2);
 }
 
-// Функция для вычисления площади разностороннего треугольника
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ РІС‹С‡РёСЃР»РµРЅРёСЏ РїР»РѕС‰Р°РґРё СЂР°Р·РЅРѕСЃС‚РѕСЂРѕРЅРЅРµРіРѕ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°
 double calculateArea(double side1, double side2, double side3) {
-    // Используем формулу Герона
+    // РСЃРїРѕР»СЊР·СѓРµРј С„РѕСЂРјСѓР»Сѓ Р“РµСЂРѕРЅР°
     double s = (side1 + side2 + side3) / 2;
     return sqrt(s * (s - side1) * (s - side2) * (s - side3));
 }
@@ -16,7 +16,7 @@ double calculateArea(double side1, double side2, double side3) {
 int main() {
     char triangleType;
 
-    // Диалог с пользователем
+    // Р”РёР°Р»РѕРі СЃ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј
     std::cout << "Select the type of triangle (equilateral - '1', different-sided - '2'): ";
     std::cin >> triangleType;
 
@@ -25,7 +25,7 @@ int main() {
         std::cout << "Side length: ";
         std::cin >> side;
 
-        // Вызов функции для равностороннего треугольника
+        // Р’С‹Р·РѕРІ С„СѓРЅРєС†РёРё РґР»СЏ СЂР°РІРЅРѕСЃС‚РѕСЂРѕРЅРЅРµРіРѕ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°
         double area = calculateArea(side);
         std::cout << "Area: " << area << std::endl;
     }
@@ -34,7 +34,7 @@ int main() {
         std::cout << "3 sides lengths (through the space): ";
         std::cin >> side1 >> side2 >> side3;
 
-        // Вызов функции для разностороннего треугольника
+        // Р’С‹Р·РѕРІ С„СѓРЅРєС†РёРё РґР»СЏ СЂР°Р·РЅРѕСЃС‚РѕСЂРѕРЅРЅРµРіРѕ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°
         double area = calculateArea(side1, side2, side3);
         std::cout << "Area: " << area << std::endl;
     }
